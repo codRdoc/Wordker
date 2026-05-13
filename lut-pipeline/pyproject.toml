@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lut-pipeline"
+version = "0.1.0"
+description = "Offline LUT generation pipeline for Words Poker"
+requires-python = ">=3.11"
+dependencies = [
+    "tqdm>=4.66",
+    "numpy>=1.26",
+    "nltk>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "black>=24.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+lut-pipeline = "lut_pipeline.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lut_pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]

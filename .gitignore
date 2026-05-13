@@ -1,0 +1,70 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+go.work.sum
+backend/vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Unity (eventual client workstream)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# LUT pipeline data — large, regenerable, do not commit
+lut-pipeline/data/raw/*
+!lut-pipeline/data/raw/.gitkeep
+lut-pipeline/data/intermediate/*
+!lut-pipeline/data/intermediate/.gitkeep
+lut-pipeline/data/generated/*
+!lut-pipeline/data/generated/.gitkeep
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key
